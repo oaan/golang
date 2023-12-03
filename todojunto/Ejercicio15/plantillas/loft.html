@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Loft de Oscar Angarita...</title>
+
+</head>
+
+<body class="jumbotron" style="background-color: black;">
+    <div>
+        <nav class="navbar navbar-expand navbar-dark bg-dark">
+            <div class="nav navbar-nav">
+                <a class="nav-item nav-link active" href="index">Oscar Angarita <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="index">Home</a>
+            </div>
+        </nav>
+    </div>
+    <div class="container">
+        <h1><i><b> Loft ....de Oscar Alberto Angarita...</b></i></h1>
+        <p>Tiene que ser en mayuscula carajo....</p>
+        
+            {{define "contenido"}}
+            <p><pre> Cuando trabajamos 
+                con paginas html las llamamos con 
+                parsefiles("/planillas/index o loft.html")
+                Cuando trabajamos con structuras se 
+                declaran por arriba de main o 
+                en utilitarios.
+                <b>No olvidar colocar </b>la capital en <s>Mayuscula</s> 
+
+
+            </p>
+            {{end}}
+{{.Id}}
+{{.Nombre}}
+{{.Apellido}}
+{{template "contenido"}}
+</pre>
+    </div>
+</body>
+
+</html>

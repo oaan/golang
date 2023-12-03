@@ -1,0 +1,24 @@
+                                 Tabla «public.producto»
+   Columna   |          Tipo          | Ordenamiento | Nulable  |       Por omisión       
+-------------+------------------------+--------------+----------+-------------------------
+ descripcion | character varying(100) |              |          | NULL::character varying
+ precio      | numeric(15,2)          |              | not null | 
+ cantidad    | integer                |              |          | 
+ fecha       | date                   |              | not null | 
+ dolar       | numeric(6,2)           |              | not null | 
+ id          | integer                |              |          | 
+
+create or replace function uspFiltrarProducto(nombreProducto varchar) returns table(descripcion varchar,precio float,cantidad int,fecha date,dolar int,id int)
+as
+$$
+select descripcion,precio,cantidad,fecha,dolar,id from public.producto where descripcion ilike '%'||nombreProducto||'%'
+$$
+language sql;
+
+create or replace function uspFiltrarProductoDolar(dolar int) returns table(descripcion varchar,precio float,cantidad int,fecha date,dolar int,id int)
+as
+$$
+select descripcion,precio,cantidad,fecha,dolar,id from public.producto 
+where dolar = $1
+$$
+language sql;

@@ -1,0 +1,40 @@
+package main
+
+import (
+  "fmt"
+  "time"
+  "math/rand"
+)
+
+func main()
+{
+  
+  rand.Seed(time.Now().UnixNano())//numeros aleatorioas mas copados
+  fmt.Println(rand.Intn(10000))
+  fmt.Scanln(&numIngresado)
+  if numIngresado==numAleatorio{
+    fmt.Println("Felicitaciones, adivinaste el numero!!")
+    return 
+    {
+            else if numeroIngresado<numAleatorio{
+        fmt.Println("El numero a adivinar es mayor.")
+      }
+      else if numeroIngresado>numAleatorio{
+        fmt.Println("El numero a adivinar es menor.")
+        }
+      }
+func Jugar(){
+  numAleatorio:=rand.Intn(100)
+  var numIngresado int
+  var intentos int
+  const maxIntentos=10
+  for intentos < maxIntentos {
+    intentos++
+    fmt.Printf("Ingresa un numero(intentos restantes: %d): ",maxIntentos-intentos+1)
+  }
+
+}
+
+
+}
+

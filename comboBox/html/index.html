@@ -1,0 +1,67 @@
+{{define "index"}}
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Principal Pagina</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+</head>
+
+<body class="container">
+  <h1>NeoPatagonia...</h1>
+
+  <form method="POST" action="/index" class="container">
+    <div class="input-group">
+      <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon">
+        <option value="" selected>Coloque la Obra social</option>
+        {{range .ListaPaciente}}
+          <option value="{{.OS}}">{{.OS}}</option>
+        {{end}}
+        
+      </select>
+      <button class="btn btn-outline-secondary" type="submit">Buscar Obra social</button>
+    </div>
+    <div class="input-group mb-3">
+      <input type="text" class="form-control" 
+      placeholder="Ponga lo que busca aqui..." aria-label="Recipient's username"
+      aria-describedby="button-addon2" 
+      name="nombre" value="{{.Nombre}}" />
+      <button class="btn btn-outline-danger" type="submit" id="button-addon2">Button</button>
+    </div>
+  </form>
+
+  <table class="table container">
+    <thead>
+      <tr class="table-dark">
+        <td>HCL</td>
+        <td>IdHCL</td>
+        <td>NOM</td>
+        <td>AP</td>
+        <td>OS</td>
+        <td>AFILIADO</td>
+
+      </tr>
+    </thead>
+    <tbody>
+      {{range .ListaPaciente}}
+      <tr>
+        <td>{{.HCL}}</td>
+        <td>{{.IdHCL}}</td>
+        <td>{{.NOM}}</td>
+        <td>{{.AP}}</td>
+        <td>{{.OS}}</td>
+        <td>{{.AFILIADO}}</td>
+      </tr>
+      {{end}}
+    </tbody>
+  </table>
+</body>
+
+</html>
+{{end}}

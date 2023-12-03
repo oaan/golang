@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Oscar Angarita Pagina Principal</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand navbar-dark bg-dark">
+        <div class="nav navbar-nav">
+            <a class="nav-item nav-link active" href="#">Loft de ...<span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="loft">Voy a Loft...</a>
+        </div>
+        <div><a name="" id="" class="btn btn-primary" href="loft" role="button">Es un Boton...</a></div>
+    </nav>
+    <div class="jumbotron"style="background-color: blue;">
+
+    <h1><b>{{.Nombre}} {{.Apellido}}</b></h1>
+        <div class="card">
+            <div class="card-header">
+                {{.Nombre}} {{.Apellido}}
+            </div>
+            <div class="card-body">
+                <h4 class="card-title">Medico Neonatologo...</h4>
+                <p class="card-text">24 de Septiembre Nro 352</p>
+            </div>
+            <div class="card-footer text-muted">
+                @Oscar Angarita Design's...
+            </div>
+           
+        </div>
+        <a href="loft" class="btn btn-primary active" role="button">No presione este boton</a>
+    </div>
+    
+</body>
+</html>
