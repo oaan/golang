@@ -15,7 +15,7 @@ type P struct {
 func Loft(w http.ResponseWriter, r *http.Request) {
 	oP := P{
 		Id: 1, Nombre: "Oscar Alberto",
-		Apellido: "Angarita",
+		Apellido: "Angarita Roberts",
 	}
 	template, _ := template.ParseFiles("plantillas/loft.html")
 	template.Execute(w, oP)
